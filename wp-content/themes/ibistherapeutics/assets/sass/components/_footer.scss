@@ -1,0 +1,260 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+/*--- footer ---*/
+
+footer {
+	width: 100%;
+	padding-top: 45px;
+	background: #eeffff;
+
+	@include breakpoint(992px) {
+		padding-top: 30px;
+	}
+	@include breakpoint(767px) {
+		padding-top: 0;
+	}
+
+	.contact-part {
+			a, h5, p {
+				font-size: 18px;
+    		color: color('brand-primary');
+				margin: 0;
+				font-family: $font-base;
+	    	display: inline-block;
+				position: relative;
+			}
+			a:hover {
+				color: color('brand-primary-dark');
+			}
+			p {
+				display: block;
+				padding: 6px 0;
+				font-size: 18px;
+				line-height: 1.6;
+				padding: 10px 0 10px 45px;
+		    background-position: left 10px;
+		    background-size: 32px 32px;
+		    background-repeat: no-repeat;
+        font-weight: 600;
+
+				&:nth-child(2) {
+          background-image: url('../../images/address-white.png');
+				}
+				&:nth-child(3) {
+          background-image: url('../../images/message-white.png');
+				}
+				&:nth-child(4) {
+          background-image: url('../../images/call-white.png');
+          margin-top: 5px;
+				}
+			}
+	}
+
+	.footer-details {
+		@include breakpoint(767px) {
+	    display: flex;
+	    flex-wrap: wrap;
+	    justify-content: center;
+	    align-items: center;
+	    flex-direction: column;
+		}
+	}
+
+	.footer-logo {
+		width: 200px;
+		margin-bottom: 10px;
+		@include breakpoint(1024px) {
+			margin-bottom: 0;
+		}
+		@include breakpoint(767px) {
+			margin: 0 auto 10px;
+		}
+	}
+
+	.footer-menu {
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			li {
+				padding: 5px 0;
+
+				@include breakpoint(767px) {
+					text-align: center;
+				}
+			}
+		}
+
+		a {
+			color: color('brand-primary');
+			font-size: 18px;
+      font-weight: 600;
+
+			&:hover {
+				color: color('brand-primary-dark');
+			}
+		}
+
+		li.current_page_item a,
+		li.current-menu-item a {
+			color: color('brand-primary-dark');
+		}
+	}
+
+  .footer-bottom {
+      background-color: color('brand-primary');
+
+      p {
+        color: color('white');
+      }
+  }
+
+  .footer-top {
+    padding-bottom: 45px;
+
+    h4 {
+      font-size: 40px;
+      padding-bottom: 40px;
+      font-weight: bold;
+			@include breakpoint(767px) {
+				padding-bottom: 10px;
+			}
+    }
+  }
+
+  .socialmedialinks {
+		padding: 1px 0;
+		ul {
+      justify-content: flex-start;
+
+			@include breakpoint(767px) {
+				justify-content: center;
+			}
+
+      li:not(:first-child) {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  .left-part {
+    p {
+      font-weight: 600;
+    }
+  }
+}
+
+.copyright-block {
+	.copyright, a {
+		color: color('white');
+		margin: 0;
+    line-height: 1.6;
+	}
+	a:hover {
+			color: color('brand-primary-dark');
+	}
+
+  p {
+    margin-bottom: 0;
+		@include breakpoint(1024px) {
+			width: 100%;
+		}
+		@include breakpoint(640px) {
+			font-size: 13px;
+		}
+  }
+}
+
+.emaillist {
+  position: relative;
+  z-index: 1;
+}
+.emaillist form {
+    display: flex;
+
+		@include breakpoint(640px) {
+			display: block;
+		}
+
+    .es-field-wrap {
+      width: 100%;
+      margin-bottom: 0;
+			@include breakpoint(640px) {
+				margin-bottom: 10px;
+			}
+    }
+
+    input {
+      border: 1px solid color('brand-primary-dark');
+      color: color('black');
+      padding: 10px 10px;
+      width: 100%;
+      box-sizing: border-box;
+      height: 46px;
+      outline: none;
+      font-weight: 600;
+      color: color('brand-primary');
+      font-size: 16px;
+    }
+
+    input[type="submit"] {
+      background: color('brand-primary-dark');
+      font-size: 16px;
+      color: color('white');
+      border: 1px solid color('brand-primary-dark');
+      display: inline-block;
+      -o-transition: .15s ease all;
+      -ms-transition: .15s ease all;
+      -moz-transition: .15s ease all;
+      -webkit-transition: .15s ease all;
+      transition: .15s ease all;
+      cursor: pointer;
+      width: auto;
+      font-weight: 600;
+      height: 46px;
+      padding: 12px 20px 12px;
+
+      &:hover {
+        background: color('black');
+        color: color('white');
+        border: 1px solid color('black');
+      }
+    }
+}
+
+.footer-form {
+    width: 45%;
+    max-width: 670px;
+    position: absolute;
+    right: 0;
+    top: -70px;
+    padding: 12px 30px 12px 70px;
+    overflow: hidden;
+		@include breakpoint(1024px) {
+			width: 65%;
+		}
+		@include breakpoint(767px) {
+	    width: 100%;
+	    max-width: 100%;
+	    left: 0;
+	    background: color('brand-primary');
+	    padding: 12px 15px;
+			position: relative;
+			top: 0;
+		}
+
+    &:after {
+      position: absolute;
+      content: '';
+      left: 30px;
+      top: 0;
+      width: 100vw;
+      height: 100%;
+      background: color('brand-primary');
+      transform: skewX(-32deg);
+			@include breakpoint(767px) {
+		    display: none;
+			}
+    }
+}
